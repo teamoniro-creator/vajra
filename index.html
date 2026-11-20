@@ -1041,6 +1041,97 @@
       .talk-calendar-embed-wide iframe { height: 820px; }
     }
 
+  
+    /* Three-person leadership team layout */
+    .leadership-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .leadership-grid .partner-card { min-height: 172px; gap: 15px; padding: 25px 20px; }
+    .leadership-grid .partner-card h3 { font-size: 18px; }
+    .leadership-grid .partner-card p { max-width: 170px; line-height: 1.55; }
+    .partner-avatar-third { background: linear-gradient(145deg, #7BCDE6, #078FE5); }
+    @media (max-width: 1000px) {
+      .leadership-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .leadership-grid { grid-template-columns: 1fr; }
+      .leadership-grid .partner-card { min-height: 128px; padding: 22px; }
+    }
+
+  
+    /* Text-only leadership cards — portraits can be added later */
+    .leadership-grid .partner-card {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      min-height: 155px;
+      padding: 30px 26px;
+    }
+    .leadership-grid .partner-card > div {
+      padding-top: 8px;
+    }
+    .leadership-grid .partner-card h3 {
+      margin: 0 0 7px;
+      font-size: clamp(18px, 1.6vw, 21px);
+    }
+    .leadership-grid .partner-card p {
+      margin: 0;
+      max-width: none;
+      color: #64748B;
+      font-size: 12px;
+      letter-spacing: .02em;
+    }
+    .leadership-grid .partner-number {
+      position: static;
+      color: #2855D5;
+      font-size: 9px;
+    }
+    .leadership-grid .partner-mark {
+      position: absolute;
+      right: 22px;
+      bottom: 15px;
+      margin: 0;
+      align-self: auto;
+      font-size: 30px;
+    }
+    @media (max-width: 760px) {
+      .leadership-grid .partner-card {
+        min-height: 125px;
+        padding: 24px;
+      }
+    }
+
+  
+    /* Fallback link for visitors who cannot view the embedded calendar */
+    .talk-calendar-fallback {
+      margin: 10px 0 0;
+      color: #D7E5FF;
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .talk-calendar-fallback a {
+      color: #FFFFFF;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: #FF7890;
+      text-underline-offset: 4px;
+      transition: color .2s ease;
+    }
+    .talk-calendar-fallback a:hover { color: #FF9BAD; }
+
+  
+    /* Contact detail links */
+    .contact-detail a {
+      color: inherit;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .contact-detail a:hover {
+      color: #2855D5;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
   </style>
 
 </head>
@@ -1318,26 +1409,33 @@
 
         <div class="partner-heading reveal">
           <div class="section-kicker">The People Behind Vajra</div>
-          <h3>Meet the Partners</h3>
+          <h3>Meet the Leadership Team</h3>
         </div>
 
-        <div class="partner-grid">
+        <div class="partner-grid leadership-grid">
           <article class="partner-card reveal">
-            <span class="partner-number">PARTNER 01</span>
-            <div class="partner-avatar" aria-hidden="true">JD</div>
+            <span class="partner-number">LEADERSHIP 01</span>
             <div>
-              <h3>John Doe</h3>
-              <p>Partner</p>
+              <h3>Swami Jerin Das</h3>
+              <p>Chief Executive Officer</p>
             </div>
             <span class="partner-mark">V.</span>
           </article>
 
           <article class="partner-card reveal">
-            <span class="partner-number">PARTNER 02</span>
-            <div class="partner-avatar partner-avatar-alt" aria-hidden="true">R</div>
+            <span class="partner-number">LEADERSHIP 02</span>
             <div>
-              <h3>Richard</h3>
-              <p>Partner</p>
+              <h3>Siyad Sha</h3>
+              <p>Chief Project Officer</p>
+            </div>
+            <span class="partner-mark">V.</span>
+          </article>
+
+          <article class="partner-card reveal">
+            <span class="partner-number">LEADERSHIP 03</span>
+            <div>
+              <h3>Swapna M K</h3>
+              <p>Chief Creative Officer</p>
             </div>
             <span class="partner-mark">V.</span>
           </article>
@@ -1554,11 +1652,11 @@
             <h2>Good things happen when we <span>start talking.</span></h2>
             <p>Have a brand to build, a campaign to plan or a business to grow? Book a one-on-one conversation with our team. Bring your ideas — we'll bring the possibilities.</p>
 
-            <!-- <div class="talk-points">
+            <div class="talk-points">
               <span><b>↗</b> Discuss your business goals</span>
               <span><b>↗</b> Explore the right advertising solutions</span>
               <span><b>↗</b> Get clarity on your next steps</span>
-            </div> -->
+            </div>
           </div>
 
           <div class="talk-calendar-heading">
@@ -1582,6 +1680,7 @@
             </iframe>
           </div>
           <small class="talk-calendar-note">Select an available slot. Your Google Meet invitation will be sent after booking confirmation.</small>
+          <p class="talk-calendar-fallback">Having trouble viewing the calendar? <a href="https://calendar.app.google/x7mdnXkTZ8uYfC2LA" target="_blank" rel="noopener noreferrer">Open the booking page in a new window ↗</a></p>
 
         </div>
 
@@ -1603,17 +1702,22 @@
 
           <p class="section-description">Have an advertising campaign in mind? Share a few details and the Vajra Media team can follow up with you.</p>
 
-          <div class="contact-detail"><span class="detail-icon">⌖</span><span><b>Location</b>Kerala, India</span></div>
+          <div class="contact-detail"><span class="detail-icon">⌖</span><span><b>Address</b>Vajra Media,<br>jThree Towers, Peroorkada,<br>Thiruvananthapuram 695005</span></div>
 
-          <div class="contact-detail"><span class="detail-icon">✉</span><span><b>Email</b>Add your official business email</span></div>
+          <div class="contact-detail"><span class="detail-icon">✉</span><span><b>Email</b><a href="mailto:info@vajramedia.in">info@vajramedia.in</a></span></div>
 
-          <div class="contact-detail"><span class="detail-icon">☎</span><span><b>Phone</b>Add your business contact number</span></div>
+          
 
         </div>
 
 
 
-        <form class="contact-form" id="enquiryForm">
+        <form class="contact-form" id="enquiryForm"
+              action="https://formsubmit.co/info@vajramedia.in"
+              method="POST">
+          <input type="hidden" name="_subject" value="New website enquiry — Vajra Media">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
 
           <div class="field"><label for="fullName">Your Name *</label><input id="fullName" name="name" autocomplete="name" placeholder="Name" required></div>
 
@@ -1625,9 +1729,9 @@
 
           <div class="field full"><label for="message">Tell Us About Your Campaign</label><textarea id="message" name="message" placeholder="Campaign objective, location, timeline or anything else we should know..."></textarea></div>
 
-          <button class="button button-blue field full" type="submit">Prepare Enquiry <span>→</span></button>
+          <button class="button button-blue field full" type="submit">Send Enquiry <span>→</span></button>
 
-          <p class="form-note">Demo form: connect this form to your email, CRM or WhatsApp number before publishing. It does not currently send or store enquiries.</p>
+          <p class="form-note">Your enquiry will be sent to info@vajramedia.in. We’ll get back to you as soon as possible.</p>
 
         </form>
 
@@ -1916,30 +2020,7 @@
 
 
     document.getElementById("year").textContent = new Date().getFullYear();
-
-
-
-    document.getElementById("enquiryForm").addEventListener("submit", event => {
-
-      event.preventDefault();
-
-      const data = new FormData(event.currentTarget);
-
-      const subject = encodeURIComponent("Vajra Media website enquiry");
-
-      const body = encodeURIComponent(
-
-        `Name: ${data.get("name")}nCompany: ${data.get("company")}nPhone: ${data.get("phone")}nService: ${data.get("service")}nMessage: ${data.get("message")}`
-
-      );
-
-      // Replace this address with Vajra Media's real enquiry email before launch.
-
-      window.location.href = `mailto:YOUR-EMAIL@example.com?subject=${subject}&body=${body}`;
-
-    });
-
-  </script>
+</script>
 
 </body>
 
