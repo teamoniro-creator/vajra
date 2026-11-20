@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#2855D3">
+
+  <meta name="description" content="Vajra Media offers logo design, brand identity, website development, digital advertising, outdoor media and corporate solutions across Kerala.">
+
+  <title>Vajra Media | Build Your Brand. Amplify Your Reach.</title>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+  <style>
+
+    :root {
+
+      --blue: #2855D3;
+
+      --cyan: #0EBAEA;
+
+      --sky: #79D2F0;
+
+      --ice: #C8EEFA;
+
+      --pink: #FF4F70;
+
+      --navy: #101B35;
+
+      --ink: #17233D;
+
+      --muted: #65748B;
+
+      --pale: #F3F8FC;
+
+      --white: #FFFFFF;
+
+      --line: #DCE7F4;
+
+      --heading: "Manrope", sans-serif;
+
+      --body: "DM Sans", sans-serif;
+
+      --shadow: 0 18px 50px rgba(16, 35, 75, .12);
+
+    }
+
+
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: var(--body); }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    button, input, select, textarea { font: inherit; }
+
+    .container { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+
+
+
+    /* Header */
+
+    .site-header {
+
+      position: sticky; top: 0; z-index: 100;
+
+      background: rgba(255,255,255,.94); backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(220,231,244,.85);
+
+    }
+
+    .nav { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+
+    .brand-mark { width: 52px; height: 41px; flex: 0 0 auto; }
+
+    .brand-word { font: 800 27px/1 var(--heading); letter-spacing: -.055em; color: var(--navy); }
+
+    .brand-word span { display: block; margin-top: 5px; text-align: center; font: 700 9px/1 var(--heading); letter-spacing: .43em; color: var(--blue); }
+
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 36px); }
+
+    .nav-links a { font-size: 13px; font-weight: 700; color: #26334D; transition: color .2s ease; }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--blue); }
+
+    .nav-links a.active::after { content: ""; display: block; height: 3px; width: 22px; margin: 8px auto -11px; border-radius: 9px; background: var(--cyan); }
+
+    .nav-cta, .button {
+
+      display: inline-flex; justify-content: center; align-items: center; gap: 10px;
+
+      border: 0; border-radius: 12px; padding: 14px 21px;
+
+      background: var(--pink); color: white; font: 800 13px var(--heading);
+
+      box-shadow: 0 9px 22px rgba(255,79,112,.22); transition: transform .2s, box-shadow .2s, background .2s;
+
+      cursor: pointer;
+
+    }
+
+    .nav-cta:hover, .button:hover { transform: translateY(-2px); box-shadow: 0 13px 26px rgba(255,79,112,.3); background: #f23e62; }
+
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--navy); font-size: 27px; cursor: pointer; }
+
+
+
+    /* Hero */
+
+    .hero {
+
+      position: relative; min-height: 610px; display: flex; align-items: center; overflow: hidden;
+
+      color: white; isolation: isolate;
+
+      background: #102c70;
+
+    }
+
+    .hero::before {
+
+      content: ""; position: absolute; inset: 0; z-index: -2;
+
+      background:
+
+        linear-gradient(90deg, rgba(9,35,103,.98) 0%, rgba(18,58,143,.94) 37%, rgba(20,65,147,.48) 61%, rgba(9,25,59,.12) 100%),
+
+        url("images/vajrabgv.png") center 48%/cover;
+
+      transform: scale(1.02);
+
+    }
+
+    .hero::after {
+
+      content: ""; position: absolute; z-index: -1; top: -28%; left: 39%; width: 420px; height: 150%;
+
+      transform: rotate(34deg); border-left: 1px solid rgba(121,210,240,.3); border-right: 1px solid rgba(121,210,240,.18);
+
+      background: linear-gradient(90deg, transparent, rgba(14,186,234,.08), transparent); pointer-events: none;
+
+    }
+
+    .hero-content { max-width: 700px; padding: 88px 0 76px; }
+
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 22px; color: var(--ice); font: 800 11px var(--heading); letter-spacing: .28em; text-transform: uppercase; }
+
+    .eyebrow::before { content: ""; width: 30px; height: 2px; background: var(--pink); }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    .hero h1 { max-width: 700px; margin-bottom: 22px; font: 800 clamp(44px, 6.2vw, 78px)/1.05 var(--heading); letter-spacing: -.065em; }
+
+    .hero h1 span { display: block; color: var(--pink); font-style: italic; }
+
+    .hero-copy { max-width: 545px; margin-bottom: 30px; color: rgba(255,255,255,.86); font-size: 17px; line-height: 1.75; }
+
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; }
+
+    .button-blue { background: var(--blue); box-shadow: 0 9px 22px rgba(0,0,0,.15); }
+
+    .button-blue:hover { background: #1d46bc; box-shadow: 0 13px 26px rgba(0,0,0,.22); }
+
+    .button-outline { background: transparent; border: 1px solid rgba(255,255,255,.7); box-shadow: none; }
+
+    .button-outline:hover { background: white; color: var(--navy); box-shadow: none; }
+
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 0; margin-top: 40px; }
+
+    .proof-item { display: flex; align-items: center; gap: 11px; padding: 0 22px; border-right: 1px solid rgba(255,255,255,.28); color: white; font-size: 12px; line-height: 1.4; }
+
+    .proof-item:first-child { padding-left: 0; }
+
+    .proof-item:last-child { border: 0; }
+
+    .proof-icon { color: var(--ice); font-size: 23px; }
+
+
+
+    /* Shared section styles */
+
+    section { padding: 100px 0; }
+
+    .section-kicker { display: flex; align-items: center; gap: 10px; color: var(--blue); font: 800 11px var(--heading); letter-spacing: .24em; text-transform: uppercase; }
+
+    .section-kicker::before { content: ""; width: 4px; height: 20px; border-radius: 5px; background: var(--pink); }
+
+    .section-title { margin: 16px 0 0; color: var(--navy); font: 800 clamp(32px, 4.2vw, 51px)/1.13 var(--heading); letter-spacing: -.055em; }
+
+    .section-description { color: var(--muted); font-size: 15px; line-height: 1.85; }
+
+
+
+    /* Services */
+
+    .services-section { position: relative; overflow: hidden; background: var(--pale); }
+
+    .services-section::before, .services-section::after { content: ""; position: absolute; width: 230px; height: 230px; border: 1px solid rgba(14,186,234,.18); transform: rotate(45deg); pointer-events: none; }
+
+    .services-section::before { top: -145px; left: -140px; }
+
+    .services-section::after { right: -155px; bottom: -150px; }
+
+    .section-intro { display: grid; grid-template-columns: 1fr .85fr; align-items: end; gap: 50px; margin-bottom: 43px; }
+
+    .section-intro .section-description { max-width: 500px; padding-left: 30px; border-left: 1px solid #B9CBE2; margin-bottom: 4px; }
+
+    /* Bento services grid */
+
+    .service-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 190px; gap: 17px; }
+
+    .service-card { position: relative; isolation: isolate; overflow: hidden; min-height: 0; border: 1px solid rgba(216,230,246,.9); border-radius: 20px; background: var(--navy); color: white; box-shadow: 0 12px 30px rgba(16,35,75,.07); transition: transform .35s ease, box-shadow .35s ease; }
+
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 22px 46px rgba(16,35,75,.17); }
+
+    .service-card:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+
+    .service-card:nth-child(2) { grid-column: span 5; grid-row: span 2; }
+
+    .service-card:nth-child(3) { grid-column: span 5; }
+
+    .service-card:nth-child(4) { grid-column: span 7; }
+
+    .service-card:nth-child(5) { grid-column: span 6; min-height: 230px; }
+
+    .service-image { position: absolute; inset: 0; z-index: -2; height: 100%; overflow: hidden; background: #dceafa; }
+
+    .service-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,20,49,.04) 0%, rgba(8,20,49,.2) 34%, rgba(8,20,49,.94) 100%); }
+
+    .service-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+
+    .service-card:hover .service-image img { transform: scale(1.07); }
+
+    .service-body { position: absolute; inset: auto 0 0; min-height: 0; padding: 26px 28px; }
+
+    .service-index { display: inline-flex; align-items: center; gap: 9px; color: #C8EEFA; font: 800 10px var(--heading); letter-spacing: .18em; }
+
+    .service-index::before { content: ""; width: 20px; height: 2px; background: var(--pink); }
+
+    .service-body h3 { margin: 11px 0 7px; color: white; font: 800 clamp(20px, 2.2vw, 29px) var(--heading); letter-spacing: -.04em; }
+
+    .service-body p { max-width: 440px; margin: 0; padding-right: 42px; color: rgba(255,255,255,.82); font-size: 13px; line-height: 1.65; }
+
+    .service-arrow { position: absolute; right: 25px; bottom: 27px; display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.42); border-radius: 50%; background: rgba(255,255,255,.12); color: white; font-size: 19px; backdrop-filter: blur(10px); transition: background .25s, border-color .25s; }
+
+    .service-card:hover .service-arrow { background: var(--pink); border-color: var(--pink); }
+
+
+
+    /* Scrollytelling campaign journey */
+
+    .journey-section { position: relative; overflow: clip; padding: 112px 0 120px; background: #F7FAFE; }
+
+    .journey-section::before { content: ""; position: absolute; width: 520px; height: 520px; right: -260px; top: 8%; border: 1px solid rgba(40,85,211,.1); border-radius: 50%; box-shadow: 0 0 0 45px rgba(40,85,211,.025), 0 0 0 90px rgba(40,85,211,.02); pointer-events: none; }
+
+    .journey-heading { max-width: 760px; margin-bottom: 56px; }
+
+    .journey-heading .section-description { max-width: 590px; margin: 18px 0 0; }
+
+    .journey-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(48px, 8vw, 112px); align-items: start; }
+
+    .journey-stage-wrap { position: sticky; top: 118px; }
+
+    .journey-stage { position: relative; min-height: 510px; overflow: hidden; border-radius: 26px; padding: 30px; color: white; background: radial-gradient(circle at 82% 12%, rgba(14,186,234,.42), transparent 32%), linear-gradient(145deg, #102653, #142F76 58%, #2855D3); box-shadow: 0 28px 65px rgba(16,35,75,.2); }
+
+    .journey-stage::before, .journey-stage::after { content: ""; position: absolute; border: 1px solid rgba(200,238,250,.18); transform: rotate(45deg); pointer-events: none; }
+
+    .journey-stage::before { width: 330px; height: 330px; right: -105px; top: -125px; }
+
+    .journey-stage::after { width: 220px; height: 220px; left: -115px; bottom: -110px; }
+
+    .stage-topline { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 16px; color: #C8EEFA; font: 800 10px var(--heading); letter-spacing: .2em; text-transform: uppercase; }
+
+    .stage-graphic { position: relative; z-index: 1; display: grid; place-items: center; min-height: 335px; margin-top: 20px; }
+
+    .stage-diamond { width: min(46%, 190px); aspect-ratio: 1; display: grid; place-items: center; background: linear-gradient(135deg, #C8EEFA, #0EBAEA 48%, #2855D3); clip-path: polygon(50% 0, 100% 38%, 50% 100%, 0 38%); filter: drop-shadow(0 18px 25px rgba(0,0,0,.2)); transition: transform .7s ease, filter .7s ease; }
+
+    .stage-diamond svg { width: 54%; height: 54%; }
+
+    .stage-orbit { position: absolute; width: 78%; height: 78%; border: 1px solid rgba(200,238,250,.35); border-radius: 50%; transition: transform .7s ease; }
+
+    .stage-orbit::before, .stage-orbit::after { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 22px rgba(255,79,112,.7); }
+
+    .stage-orbit::before { top: 12%; left: 18%; }
+
+    .stage-orbit::after { right: 10%; bottom: 19%; width: 8px; height: 8px; background: var(--cyan); }
+
+    .stage-chip { position: absolute; display: flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid rgba(255,255,255,.22); border-radius: 10px; background: rgba(255,255,255,.12); color: white; font-size: 11px; font-weight: 700; backdrop-filter: blur(12px); transition: transform .6s ease, background .4s ease; }
+
+    .stage-chip b { color: var(--ice); font-size: 16px; }
+
+    .chip-one { top: 15%; left: 0; }
+
+    .chip-two { top: 22%; right: -2%; }
+
+    .chip-three { bottom: 13%; left: 5%; }
+
+    .chip-four { bottom: 8%; right: 0; }
+
+    .stage-caption { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.2); color: #D9E9FF; font-size: 12px; }
+
+    .stage-caption strong { color: white; font: 800 13px var(--heading); }
+
+    .journey-steps { position: relative; padding: 4px 0; }
+
+    .journey-steps::before { content: ""; position: absolute; left: 17px; top: 26px; bottom: 45px; width: 1px; background: #C9D8EB; }
+
+    .journey-step { position: relative; min-height: 300px; padding: 0 0 65px 62px; opacity: .48; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+
+    .journey-step:last-child { min-height: 0; padding-bottom: 10px; }
+
+    .journey-step.is-active { opacity: 1; transform: translateY(0); }
+
+    .step-marker { position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #B9CBE2; border-radius: 50%; color: var(--blue); background: #F7FAFE; font: 800 11px var(--heading); transition: all .35s; }
+
+    .journey-step.is-active .step-marker { border-color: var(--pink); color: white; background: var(--pink); box-shadow: 0 0 0 7px rgba(255,79,112,.1); }
+
+    .step-label { margin: 0 0 12px; color: var(--blue); font: 800 10px var(--heading); letter-spacing: .2em; text-transform: uppercase; }
+
+    .journey-step h3 { max-width: 430px; margin: 0 0 14px; color: var(--navy); font: 800 clamp(25px, 3vw, 37px)/1.12 var(--heading); letter-spacing: -.05em; }
+
+    .journey-step p { max-width: 430px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+
+    .journey-step .step-detail { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+
+    .journey-step .step-detail span { padding: 8px 11px; border: 1px solid #DCE7F4; border-radius: 999px; color: #40516D; background: white; font-size: 10px; font-weight: 700; }
+
+    .journey-section[data-active="1"] .stage-diamond { transform: rotate(-8deg) scale(1.04); }
+
+    .journey-section[data-active="2"] .stage-diamond { transform: rotate(8deg) scale(.94); }
+
+    .journey-section[data-active="3"] .stage-diamond { transform: rotate(0) scale(1.1); }
+
+    .journey-section[data-active="2"] .stage-orbit { transform: rotate(65deg) scale(1.08); }
+
+    .journey-section[data-active="3"] .stage-orbit { transform: rotate(145deg) scale(.94); }
+
+    .journey-section[data-active="2"] .stage-chip { background: rgba(14,186,234,.22); }
+
+    .journey-section[data-active="3"] .stage-chip { background: rgba(255,79,112,.18); }
+
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+
+
+
+    /* Media feature */
+
+    .media-section { color: white; background: var(--navy); overflow: hidden; }
+
+    .media-layout { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 65px; }
+
+    .media-copy .section-kicker { color: var(--sky); }
+
+    .media-copy .section-title { color: white; }
+
+    .media-copy .section-description { max-width: 520px; margin: 20px 0 25px; color: #B9C8E0; }
+
+    .media-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 28px 0 32px; }
+
+    .media-list span { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.14); color: #E5EDFA; font-size: 13px; }
+
+    .media-list span::before { content: "◆"; margin-right: 10px; color: var(--pink); font-size: 9px; }
+
+    .media-visual { position: relative; }
+
+    .media-visual img { width: 100%; height: 480px; object-fit: cover; border-radius: 18px; box-shadow: 0 25px 60px rgba(0,0,0,.3); }
+
+    .media-tag { position: absolute; left: -22px; bottom: 28px; max-width: 230px; padding: 18px 21px; border: 1px solid rgba(255,255,255,.25); border-radius: 13px; background: rgba(40,85,211,.92); backdrop-filter: blur(12px); }
+
+    .media-tag strong { display: block; margin-bottom: 5px; font: 800 17px var(--heading); }
+
+    .media-tag span { color: #E4F5FF; font-size: 11px; line-height: 1.5; }
+
+
+
+    /* Why Vajra */
+
+    .why-section { background: white; }
+
+    .why-heading { max-width: 700px; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 48px; }
+
+    .why-card { padding: 23px 20px 20px; border-top: 2px solid var(--cyan); background: linear-gradient(180deg, #F7FBFF, white); }
+
+    .why-number { color: var(--pink); font: 800 12px var(--heading); letter-spacing: .1em; }
+
+    .why-card h3 { margin: 16px 0 9px; color: var(--navy); font: 800 17px var(--heading); }
+
+    .why-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
+
+
+    /* CTA */
+
+    .cta-section { padding: 0 0 100px; background: white; }
+
+    .cta-panel { position: relative; overflow: hidden; display: flex; justify-content: space-between; align-items: center; gap: 35px; padding: 55px 60px; border-radius: 22px; color: white; background: linear-gradient(115deg, #173C9C, #2855D3 58%, #0EBAEA); }
+
+    .cta-panel::after { content: "◇"; position: absolute; right: 23%; top: -90px; color: rgba(255,255,255,.09); font: 400 300px/1 var(--heading); transform: rotate(-12deg); pointer-events: none; }
+
+    .cta-panel > * { position: relative; z-index: 1; }
+
+    .cta-panel .section-kicker { color: var(--ice); }
+
+    .cta-panel h2 { max-width: 650px; margin: 13px 0 10px; font: 800 clamp(29px, 3.7vw, 43px)/1.15 var(--heading); letter-spacing: -.05em; }
+
+    .cta-panel p { margin: 0; color: #DCEAFF; font-size: 14px; line-height: 1.7; }
+
+
+
+    /* Contact */
+
+    .contact-section { background: var(--pale); }
+
+    .contact-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 65px; align-items: start; }
+
+    .contact-copy .section-description { max-width: 440px; margin: 19px 0 28px; }
+
+    .contact-detail { display: flex; gap: 13px; align-items: flex-start; margin: 17px 0; color: var(--muted); font-size: 14px; }
+
+    .contact-detail b { color: var(--navy); display: block; margin-bottom: 3px; }
+
+    .contact-detail .detail-icon { display: grid; place-items: center; flex: 0 0 38px; height: 38px; border-radius: 11px; background: #E1F4FC; color: var(--blue); }
+
+    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 28px; border: 1px solid #DFEAF5; border-radius: 18px; background: white; box-shadow: 0 15px 45px rgba(23,51,92,.06); }
+
+    .field { display: flex; flex-direction: column; gap: 7px; }
+
+    .field.full { grid-column: 1 / -1; }
+
+    .field label { color: #3A4961; font-size: 12px; font-weight: 700; }
+
+    .field input, .field select, .field textarea { width: 100%; padding: 13px 14px; border: 1px solid #DCE5F0; border-radius: 9px; outline: 0; color: var(--ink); background: #FBFDFF; font: 13px var(--body); transition: border .2s, box-shadow .2s; }
+
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(40,85,211,.1); }
+
+    .field textarea { min-height: 112px; resize: vertical; }
+
+    .form-note { grid-column: 1 / -1; margin: -2px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+
+
+
+    /* Footer */
+
+    .footer { padding: 58px 0 22px; color: white; background: #0C1730; }
+
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 42px; padding-bottom: 42px; }
+
+    .footer .brand-word { color: white; }
+
+    .footer .brand-word span { color: var(--sky); }
+
+    .footer-about { max-width: 320px; margin: 19px 0 0; color: #AAB8D0; font-size: 13px; line-height: 1.8; }
+
+    .footer h4 { margin: 5px 0 18px; color: white; font: 800 13px var(--heading); }
+
+    .footer-links { display: grid; gap: 13px; }
+
+    .footer-links a { color: #AAB8D0; font-size: 12px; transition: color .2s; }
+
+    .footer-links a:hover { color: var(--pink); }
+
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); color: #8190AA; font-size: 11px; }
+
+
+
+    @media (max-width: 1000px) {
+
+      .nav-links { gap: 16px; }
+
+      .nav-links a { font-size: 12px; }
+
+      .service-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: 190px; }
+
+      .service-card:nth-child(1), .service-card:nth-child(2) { grid-column: span 3; grid-row: span 2; }
+
+      .service-card:nth-child(3), .service-card:nth-child(4) { grid-column: span 3; }
+
+      .service-card:nth-child(5) { grid-column: span 6; }
+
+      .journey-layout { grid-template-columns: 1fr; gap: 42px; }
+
+      .journey-stage-wrap { position: relative; top: auto; }
+
+      .journey-stage { min-height: 420px; }
+
+      .stage-graphic { min-height: 260px; }
+
+      .journey-step { min-height: 240px; }
+
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .media-layout { gap: 38px; }
+
+      .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .container { width: min(100% - 36px, 560px); }
+
+      .nav { height: 72px; }
+
+      .brand-mark { width: 44px; height: 35px; }
+
+      .brand-word { font-size: 23px; }
+
+      .menu-toggle { display: block; }
+
+      .nav-cta { display: none; }
+
+      .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 17px 22px 23px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 18px 28px rgba(16,27,53,.1); }
+
+      .nav-links.open { display: grid; gap: 0; }
+
+      .nav-links a { padding: 13px 4px; border-bottom: 1px solid #EDF2F8; font-size: 14px; }
+
+      .nav-links a.active::after { display: none; }
+
+      .nav-links a:last-child { border: 0; }
+
+      .hero { min-height: 660px; align-items: flex-end; }
+
+      .hero::before { background: linear-gradient(90deg, rgba(9,35,103,.96), rgba(18,58,143,.77)), url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=85") 58% center/cover; }
+
+      .hero-content { padding: 85px 0 48px; }
+
+      .hero h1 { font-size: clamp(43px, 12vw, 62px); }
+
+      .hero-copy { font-size: 15px; }
+
+      .hero-proof { margin-top: 30px; gap: 15px 0; }
+
+      .proof-item { width: 50%; padding: 0 10px; border: 0; }
+
+      .proof-item:first-child { padding-left: 0; }
+
+      section { padding: 72px 0; }
+
+      .section-intro, .media-layout, .contact-layout { grid-template-columns: 1fr; gap: 24px; }
+
+      .section-intro .section-description { padding: 0 0 0 17px; }
+
+      .service-grid { gap: 12px; grid-auto-rows: 175px; }
+
+      .service-card:nth-child(1), .service-card:nth-child(2) { grid-column: span 3; grid-row: span 2; }
+
+      .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: span 6; grid-row: span 1; }
+
+      .service-body { padding: 18px 17px; }
+
+      .service-body h3 { font-size: 17px; }
+
+      .service-body p { font-size: 11px; }
+
+      .service-arrow { right: 14px; bottom: 17px; width: 30px; height: 30px; }
+
+      .journey-section { padding: 76px 0 82px; }
+
+      .journey-heading { margin-bottom: 35px; }
+
+      .journey-stage { min-height: 360px; padding: 22px; }
+
+      .stage-graphic { min-height: 220px; }
+
+      .stage-chip { padding: 8px 9px; font-size: 9px; }
+
+      .journey-step { min-height: 260px; padding-left: 52px; padding-bottom: 48px; }
+
+      .journey-step h3 { font-size: 27px; }
+
+      .journey-step p { font-size: 13px; }
+
+      .media-visual img { height: 330px; }
+
+      .media-tag { left: 12px; bottom: 12px; }
+
+      .why-grid { gap: 13px; }
+
+      .why-card { padding: 17px 14px; }
+
+      .why-card h3 { font-size: 15px; }
+
+      .why-card p { font-size: 12px; }
+
+      .cta-section { padding-bottom: 72px; }
+
+      .cta-panel { display: block; padding: 35px 25px; }
+
+      .cta-panel .button { margin-top: 23px; }
+
+      .contact-form { padding: 20px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 22px; }
+
+      .footer-grid > div:first-child { grid-column: 1 / -1; }
+
+      .footer-bottom { flex-direction: column; }
+
+    }
+
+    @media (max-width: 420px) {
+
+      .container { width: calc(100% - 30px); }
+
+      .service-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+
+      .service-card:nth-child(1), .service-card:nth-child(2), .service-card:nth-child(3), .service-card:nth-child(4), .service-card:nth-child(5) { grid-column: 1; grid-row: span 1; }
+
+      .service-body { padding: 20px; }
+
+      .journey-stage { min-height: 330px; padding: 18px; }
+
+      .stage-graphic { min-height: 205px; }
+
+      .stage-chip { font-size: 8px; }
+
+      .chip-one { left: -7px; }
+
+      .chip-two { right: -7px; }
+
+      .chip-three { left: -7px; }
+
+      .chip-four { right: -7px; }
+
+      .media-list { grid-template-columns: 1fr; }
+
+      .why-grid { grid-template-columns: 1fr 1fr; }
+
+      .contact-form { grid-template-columns: 1fr; }
+
+      .field.full, .form-note { grid-column: auto; }
+
+      .hero-actions .button { width: 100%; }
+
+    }
+
+
+
+    /* Full-page scrollytelling layer */
+
+    body { --scroll-progress: 0%; }
+
+    .scroll-progress { position: fixed; inset: 0 0 auto; z-index: 300; height: 3px; background: rgba(40,85,211,.10); pointer-events: none; }
+
+    .scroll-progress span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--pink)); transform-origin: left; }
+
+    .story-rail { position: fixed; z-index: 90; right: 22px; top: 50%; display: grid; gap: 12px; transform: translateY(-50%); }
+
+    .story-rail a { position: relative; display: grid; place-items: center; width: 27px; height: 27px; border: 1px solid rgba(40,85,211,.24); border-radius: 50%; color: var(--blue); background: rgba(255,255,255,.82); backdrop-filter: blur(10px); font: 700 8px var(--heading); transition: .25s ease; }
+
+    .story-rail a span { opacity: 0; transform: translateX(5px); transition: .2s ease; }
+
+    .story-rail a:hover span, .story-rail a.is-active span { opacity: 1; transform: translateX(0); }
+
+    .story-rail a.is-active { width: 34px; height: 34px; border-color: var(--pink); color: white; background: var(--pink); box-shadow: 0 5px 18px rgba(255,79,112,.25); }
+
+    .story-section { position: relative; }
+
+    .story-section::after { content: attr(data-story); position: absolute; z-index: 0; top: 34px; right: max(28px, calc((100vw - 1240px)/2)); color: rgba(40,85,211,.075); font: 800 clamp(68px, 10vw, 150px)/1 var(--heading); letter-spacing: -.09em; pointer-events: none; }
+
+    .hero.story-section::after { top: auto; bottom: 18px; color: rgba(255,255,255,.08); }
+
+    .story-section > .container { position: relative; z-index: 1; }
+
+    .hero { min-height: min(850px, calc(100svh - 82px)); }
+
+    .hero::before { background-position: center calc(50% + var(--hero-parallax, 0px)); }
+
+    .hero-content { animation: hero-arrive .9s cubic-bezier(.2,.7,.2,1) both; }
+
+    @keyframes hero-arrive { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
+
+    .story-reveal { opacity: 0; transform: translateY(34px) scale(.99); filter: blur(3px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease; }
+
+    .story-reveal.is-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+
+    .service-card.story-reveal { transition-delay: var(--reveal-delay, 0ms); }
+
+    .why-card.story-reveal { transition-delay: var(--reveal-delay, 0ms); }
+
+    .section-intro, .journey-heading, .media-copy, .why-heading, .contact-copy, .contact-form, .cta-panel, .media-visual { will-change: transform, opacity; }
+
+    .media-section { position: relative; }
+
+    @media (min-width: 1001px) {
+
+      .media-layout { align-items: start; }
+
+      .media-copy { padding: 38px 0 70px; }
+
+      .media-visual { position: sticky; top: 126px; align-self: start; margin-top: 42px; }
+
+      .media-visual img { height: min(62vh, 560px); }
+
+      .why-section { overflow: hidden; }
+
+      .why-card { min-height: 210px; }
+
+      .contact-layout { align-items: center; }
+
+    }
+
+    .story-section:not(.hero) { isolation: isolate; }
+
+    .story-section:not(.hero)::before { z-index: -1; }
+
+    .journey-section .journey-stage-wrap { align-self: start; }
+
+    .journey-stage { box-shadow: 0 28px 65px rgba(16,35,75,.2), 0 0 0 1px rgba(255,255,255,.08) inset; }
+
+    .service-card, .why-card, .media-tag, .cta-panel, .contact-form { transform-origin: center; }
+
+    .story-section.is-current .section-kicker::before { box-shadow: 0 0 0 5px rgba(255,79,112,.10); }
+
+    @media (max-width: 1000px) {
+
+      .story-rail { right: 8px; }
+
+      .story-section::after { right: 18px; top: 22px; font-size: 82px; }
+
+      .media-visual { position: relative; top: auto; }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .story-rail { display: none; }
+
+      .hero { min-height: 680px; }
+
+      .story-section::after { top: 12px; right: 14px; font-size: 66px; }
+
+      .story-reveal { filter: none; transform: translateY(20px); }
+
+      .story-reveal.is-visible { transform: none; }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .story-reveal { opacity: 1; transform: none; filter: none; }
+
+      .hero-content { animation: none; }
+
+      .scroll-progress { display: none; }
+
+      .story-rail a, .story-rail a span { transition: none; }
+
+    }
+
+
+
+
+    /* One unified scrollytelling chapter: Approach + Work + Kerala Presence */
+    .approach-work-section { position: relative; overflow: clip; }
+    .approach-work-section > .journey-section,
+    .approach-work-section > .media-section,
+    .approach-work-section > .why-section { position: relative; }
+    .approach-work-section > .media-section { scroll-margin-top: 90px; }
+    .approach-work-section > .why-section { scroll-margin-top: 90px; }
+    .approach-work-section .journey-section { padding-bottom: 112px; }
+    .approach-work-section .media-section { padding-top: 105px; padding-bottom: 105px; }
+    .approach-work-section .why-section { padding-top: 105px; padding-bottom: 112px; }
+    .approach-work-section::after { content: "04"; }
+    @media (max-width: 1000px) {
+      .approach-work-section .journey-section { padding-bottom: 76px; }
+      .approach-work-section .media-section,
+      .approach-work-section .why-section { padding-top: 76px; padding-bottom: 76px; }
+    }
+
+
+    /* Ensure chapter 04 is clearly visible on the campaign CTA section */
+    #campaign-cta.story-section::after {
+      content: "05";
+      display: block;
+      top: 28px;
+      right: max(28px, calc((100vw - 1240px)/2));
+      z-index: 0;
+      color: rgba(40, 85, 211, .13);
+      font: 800 clamp(68px, 10vw, 150px)/1 var(--heading);
+      letter-spacing: -.09em;
+      pointer-events: none;
+    }
+    #campaign-cta.story-section > .container {
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 1000px) {
+      #campaign-cta.story-section::after { top: 12px; right: 14px; font-size: 66px; }
+    }
+
+
+    /* Who We Are — collective experience and partner introduction */
+    .about-section { position: relative; overflow: hidden; background: #F3F7FD; }
+    .about-section::before {
+      content: ""; position: absolute; width: 420px; height: 420px; right: -170px; top: -150px;
+      border: 1px solid rgba(40,85,211,.13); transform: rotate(45deg); pointer-events: none;
+    }
+    .about-intro { display: grid; grid-template-columns: 1.35fr .65fr; align-items: center; gap: 70px; }
+    .about-copy .section-title { margin-bottom: 22px; }
+    .about-copy .section-title span { color: var(--blue); }
+    .about-copy .section-description { max-width: 690px; color: var(--muted); font-size: 16px; line-height: 1.9; }
+    .about-experience {
+      min-height: 255px; padding: 34px; display: flex; flex-direction: column; justify-content: center;
+      border-radius: 24px; color: white; background: linear-gradient(145deg, #2855D5, #102A78);
+      box-shadow: 0 24px 55px rgba(40,85,213,.19); position: relative; overflow: hidden;
+    }
+    .about-experience::after { content: "V"; position: absolute; right: 8px; bottom: -70px; font: 900 230px/1 var(--heading); color: rgba(255,255,255,.07); }
+    .about-experience strong { font: 800 clamp(76px, 9vw, 116px)/.9 var(--heading); letter-spacing: -.09em; position: relative; z-index: 1; }
+    .about-experience strong span { color: var(--pink); }
+    .about-experience div { margin-top: 18px; font: 800 12px/1.55 var(--heading); letter-spacing: .16em; position: relative; z-index: 1; }
+    .about-experience small { margin-top: 12px; color: #C8D8FF; font-size: 12px; position: relative; z-index: 1; }
+    .partner-heading { margin: 76px 0 24px; }
+    .partner-heading h3 { margin: 10px 0 0; font: 800 clamp(25px, 3vw, 36px)/1.15 var(--heading); color: var(--ink); letter-spacing: -.04em; }
+    .partner-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .partner-card {
+      min-height: 148px; display: flex; align-items: center; gap: 20px; padding: 25px 28px;
+      position: relative; overflow: hidden; border: 1px solid #DFE8F5; border-radius: 18px; background: white;
+      box-shadow: 0 12px 30px rgba(16,35,75,.045); transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .partner-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(16,35,75,.09); }
+    .partner-number { position: absolute; top: 18px; right: 20px; color: #8A9AB5; font: 800 9px var(--heading); letter-spacing: .15em; }
+    .partner-avatar {
+      width: 66px; height: 66px; flex: 0 0 66px; display: grid; place-items: center; border-radius: 50%;
+      color: white; background: linear-gradient(145deg, #08A9E5, #2855D5); font: 800 20px var(--heading);
+    }
+    .partner-avatar-alt { background: linear-gradient(145deg, #FF4F70, #B92E58); }
+    .partner-card h3 { margin: 0 0 5px; color: var(--ink); font: 800 21px var(--heading); }
+    .partner-card p { margin: 0; color: var(--muted); font-size: 12px; }
+    .partner-mark { margin-left: auto; align-self: flex-end; color: rgba(40,85,213,.12); font: 900 36px var(--heading); }
+    .service-card:nth-child(6) { grid-column: span 6; min-height: 230px; }
+    @media (max-width: 1000px) {
+      .about-intro { gap: 35px; }
+      .partner-heading { margin-top: 55px; }
+      .service-card:nth-child(6) { grid-column: span 6; }
+    }
+    @media (max-width: 760px) {
+      .about-intro { grid-template-columns: 1fr; gap: 28px; }
+      .about-experience { min-height: 210px; }
+      .partner-heading { margin-top: 48px; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .partner-card { min-height: 128px; padding: 22px; }
+      .service-card:nth-child(6) { grid-column: span 6; }
+    }
+    @media (max-width: 420px) {
+      .service-card:nth-child(6) { grid-column: 1; grid-row: span 1; }
+    }
+
+  
+    /* Google Meet booking CTA */
+    .booking-card {
+      display: flex; align-items: flex-start; gap: 16px; margin-top: 30px; padding: 22px;
+      border: 1px solid rgba(40,85,211,.16); border-radius: 16px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #EDF7FC 100%);
+      box-shadow: 0 12px 32px rgba(23,51,92,.055);
+    }
+    .booking-card-icon {
+      display: grid; place-items: center; flex: 0 0 44px; height: 44px; border-radius: 13px;
+      color: white; background: linear-gradient(145deg, var(--blue), var(--cyan));
+      font: 800 22px var(--heading);
+    }
+    .booking-card-copy { min-width: 0; }
+    .booking-eyebrow { color: var(--pink); font: 800 9px var(--heading); letter-spacing: .16em; }
+    .booking-card h3 { margin: 7px 0 7px; color: var(--navy); font: 800 19px/1.25 var(--heading); letter-spacing: -.035em; }
+    .booking-card p { margin: 0 0 13px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .booking-link { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font: 800 12px var(--heading); }
+    .booking-link span { color: var(--pink); font-size: 16px; transition: transform .2s ease; }
+    .booking-link:hover span { transform: translate(3px,-3px); }
+    @media (max-width: 520px) {
+      .booking-card { padding: 18px; gap: 12px; }
+      .booking-card-icon { flex-basis: 38px; height: 38px; }
+    }
+
+  
+    /* Primary conversion section: Let's Talk Business */
+    .talk-section { padding: 28px 0 112px; background: #F4F8FE; }
+    .talk-panel {
+      position: relative; isolation: isolate; overflow: hidden; display: grid;
+      grid-template-columns: 1.08fr .82fr; align-items: center; gap: clamp(35px, 6vw, 82px);
+      padding: clamp(30px, 5vw, 68px); border-radius: 28px; color: #fff;
+      background: linear-gradient(125deg, #10265D 0%, #1B43A8 54%, #087FBF 100%);
+      box-shadow: 0 28px 75px rgba(25,64,151,.20);
+    }
+    .talk-panel::before {
+      content: ""; position: absolute; z-index: -1; width: 510px; height: 510px;
+      right: 20%; top: -330px; border: 1px solid rgba(255,255,255,.13);
+      transform: rotate(45deg); box-shadow: 0 0 0 35px rgba(255,255,255,.025), 0 0 0 70px rgba(255,255,255,.02);
+    }
+    .talk-panel::after {
+      content: "V"; position: absolute; z-index: -1; right: 30%; bottom: -155px;
+      color: rgba(255,255,255,.045); font: 900 420px/.8 var(--heading); pointer-events: none;
+    }
+    .talk-copy .section-kicker { color: #9FE7FA; }
+    .talk-copy h2 {
+      max-width: 680px; margin: 18px 0 18px; color: #fff;
+      font: 800 clamp(38px, 5.2vw, 66px)/1.04 var(--heading); letter-spacing: -.065em;
+    }
+    .talk-copy h2 span { color: #FF7890; }
+    .talk-copy > p { max-width: 570px; margin: 0; color: #D7E5FF; font-size: 15px; line-height: 1.85; }
+    .talk-points { display: grid; gap: 13px; margin-top: 32px; }
+    .talk-points span { display: flex; align-items: center; gap: 11px; color: #E8F0FF; font-size: 13px; }
+    .talk-points b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: #fff; background: rgba(255,79,112,.9); font-size: 12px; }
+    .talk-booking {
+      position: relative; padding: clamp(24px, 3vw, 34px); border: 1px solid rgba(255,255,255,.55);
+      border-radius: 22px; color: #18294C; background: #fff;
+      box-shadow: 0 22px 55px rgba(4,20,61,.22);
+    }
+    .talk-booking-top { display: flex; align-items: center; gap: 11px; }
+    .talk-calendar-icon {
+      display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
+      color: #fff; background: linear-gradient(145deg, #08A9E5, #2855D5); font-size: 23px;
+    }
+    .talk-booking-label { color: #2855D5; font: 800 9px var(--heading); letter-spacing: .17em; }
+    .talk-booking h3 { margin: 22px 0 9px; color: #17284B; font: 800 clamp(23px, 2.4vw, 29px)/1.15 var(--heading); letter-spacing: -.045em; }
+    .talk-booking > p { margin: 0; color: #64748B; font-size: 13px; line-height: 1.75; }
+    .talk-meta { display: grid; gap: 12px; margin: 23px 0 25px; padding: 18px 0; border-top: 1px solid #E8EEF7; border-bottom: 1px solid #E8EEF7; }
+    .talk-meta span { display: flex; align-items: center; gap: 10px; color: #344563; font-size: 12px; font-weight: 650; }
+    .talk-meta b { color: #2855D5; font-size: 15px; }
+    .talk-book-button {
+      display: flex; justify-content: center; align-items: center; gap: 12px; width: 100%;
+      padding: 16px 20px; border-radius: 12px; color: #fff; background: #FF4F70;
+      box-shadow: 0 10px 24px rgba(255,79,112,.24); font: 800 13px var(--heading);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .talk-book-button:hover { transform: translateY(-2px); background: #F23E62; box-shadow: 0 14px 28px rgba(255,79,112,.30); }
+    .talk-book-button span { font-size: 17px; }
+    .talk-booking small { display: block; margin-top: 13px; color: #8491A7; font-size: 10px; line-height: 1.6; text-align: center; }
+    @media (max-width: 900px) {
+      .talk-panel { grid-template-columns: 1fr; gap: 35px; }
+      .talk-booking { max-width: 560px; }
+    }
+    @media (max-width: 600px) {
+      .talk-section { padding: 12px 0 75px; }
+      .talk-panel { padding: 27px 21px; border-radius: 20px; }
+      .talk-copy h2 { font-size: clamp(37px, 11vw, 52px); }
+      .talk-booking { padding: 23px 19px; }
+    }
+
+  
+    /* Embedded live Google Calendar appointment schedule */
+    .talk-calendar-embed {
+      width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #E6ECF5;
+      border-radius: 13px;
+      background: #fff;
+    }
+    .talk-calendar-embed iframe {
+      display: block;
+      width: 100%;
+      height: 680px;
+      border: 0;
+      background: #fff;
+    }
+    @media (max-width: 600px) {
+      .talk-calendar-embed iframe { height: 760px; }
+    }
+
+  
+    /* Full-width booking calendar layout */
+    .talk-panel-wide {
+      display: block;
+      overflow: hidden;
+    }
+    .talk-copy-wide {
+      max-width: 850px;
+      margin-bottom: 38px;
+    }
+    .talk-copy-wide > p { max-width: 760px; }
+    .talk-calendar-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 0 0 17px;
+    }
+    .talk-calendar-heading h3 {
+      margin: 9px 0 6px;
+      color: #fff;
+      font: 800 clamp(23px, 2.5vw, 30px)/1.15 var(--heading);
+      letter-spacing: -.04em;
+    }
+    .talk-calendar-heading p {
+      margin: 0;
+      color: #D7E5FF;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .talk-calendar-embed-wide {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 22px 55px rgba(4,20,61,.20);
+    }
+    .talk-calendar-embed-wide iframe {
+      width: 100%;
+      height: 760px;
+    }
+    .talk-calendar-note {
+      display: block;
+      margin-top: 14px;
+      color: #D7E5FF;
+      font-size: 11px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .talk-copy-wide { margin-bottom: 28px; }
+      .talk-calendar-heading { align-items: flex-start; }
+      .talk-calendar-heading h3 { font-size: 23px; }
+      .talk-calendar-embed-wide iframe { height: 820px; }
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+  <header class="site-header">
+
+    <div class="container nav">
+
+      <a class="brand" href="#home" aria-label="Vajra Media home">
+
+        <!-- Replace this illustrative diamond with the final Vajra logo SVG when available. -->
+
+        <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1088" role="img" aria-label="Vajra diamond">
+
+          <path d="M60 166 L1332 166 L697 1028 Z" fill="#2855D5" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+          <path d="M265 266 L412 66 L980 66 L1128 266 Z" fill="#C5EFF9"/>
+
+          <path d="M412 66 L490 266 L265 266 Z" fill="#78D3EB"/>
+
+          <path d="M412 66 L696 66 L490 266 Z" fill="#C5EFF9"/>
+
+          <path d="M696 66 L903 266 L490 266 Z" fill="#08A9E5"/>
+
+          <path d="M696 66 L980 66 L903 266 Z" fill="#C5EFF9"/>
+
+          <path d="M980 66 L1128 266 L903 266 Z" fill="#78D3EB"/>
+
+          <path d="M265 266 L490 266 L698 790 L698 874 Z" fill="#08B6DD"/>
+
+          <path d="M490 266 L903 266 L698 790 Z" fill="#7BCDE6"/>
+
+          <path d="M903 266 L1128 266 L698 874 L698 790 Z" fill="#078FE5"/>
+
+          <path d="M698 790 L698 874" fill="none" stroke="#18B8E9" stroke-width="2"/>
+
+        </svg>
+
+        <span class="brand-word">VAJRA<span>MEDIA</span></span>
+
+      </a>
+
+
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+
+        <a class="active" href="#home">Home</a>
+
+        <a href="#who-we-are">Who We Are</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#approach">Our Approach &amp; Work</a>
+
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+
+
+      <a class="nav-cta" href="https://calendar.app.google/x7mdnXkTZ8uYfC2LA" target="_blank" rel="noopener noreferrer">Book a Meeting <span>↗</span></a>
+
+    </div>
+
+  </header>
+
+
+
+  <nav class="story-rail" aria-label="Page chapters">
+
+    <a href="#home" class="is-active" aria-label="Introduction"><span>01</span></a>
+
+    <a href="#services" aria-label="Services"><span>02</span></a>
+
+    <a href="#who-we-are" aria-label="Who we are"><span>03</span></a>
+
+    <a href="#approach" aria-label="Our approach, work and Kerala presence"><span>04</span></a>
+
+    <a href="#campaign-cta" aria-label="Start a campaign"><span>05</span></a>
+
+    <a href="#contact" aria-label="Contact"><span>06</span></a>
+
+  </nav>
+
+  <main>
+
+    <section class="hero story-section" id="home" data-story="01">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">Integrated Advertising &amp; Media Solutions</p>
+
+          <h1>Make Your Brand <span>Impossible to Miss.</span></h1>
+
+          <p class="hero-copy">From digital platforms to city streets, we create high-impact advertising solutions that put your brand in front of the right audience, across Kerala.</p>
+
+          <div class="hero-actions">
+
+            <a class="button" href="#services">Explore Our Services <span>→</span></a>
+
+            <a class="button button-outline" href="#work"><span>▶</span> Discover Our Media</a>
+
+          </div>
+
+          <div class="hero-proof">
+
+            <div class="proof-item"><span class="proof-icon">◎</span><span>Multi-Platform<br>Campaigns</span></div>
+
+            <div class="proof-item"><span class="proof-icon">◆</span><span>Kerala-Wide<br>Reach</span></div>
+
+            <div class="proof-item"><span class="proof-icon">♧</span><span>End-to-End<br>Execution</span></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="services-section story-section" id="services" data-story="02">
+
+      <div class="container">
+
+        <div class="section-intro" id="about">
+
+          <div>
+
+            <div class="section-kicker">What We Do</div>
+
+            <h2 class="section-title">One Partner.<br>Build, Brand &amp; Amplify.</h2>
+
+          </div>
+
+          <p class="section-description">From your first logo to a complete digital presence and high-impact campaigns, we help businesses build their identity, reach more people and grow across Kerala.</p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+          <a class="service-card reveal" href="#contact">
+
+            <div class="service-image"><img src="images/digital.png" alt="Digital advertising analytics and campaign planning" loading="lazy"></div>
+
+            <div class="service-body">
+
+              <span class="service-index">01 / DIGITAL</span>
+
+              <h3>Digital Advertising</h3>
+
+              <p>Meta, Google, WhatsApp and OTT campaigns that connect your brand with the right audience.</p>
+
+              <span class="service-arrow">↗</span>
+
+            </div>
+
+          </a>
+
+          <a class="service-card reveal" href="#work">
+
+            <div class="service-image"><img src="images/outdoor.png" alt="City outdoor billboard advertising" loading="lazy"></div>
+
+            <div class="service-body">
+
+              <span class="service-index">02 / OUTDOOR</span>
+
+              <h3>Outdoor Advertising</h3>
+
+              <p>Hoardings, mini hoardings, media estimation and rental solutions.</p>
+
+              <span class="service-arrow">↗</span>
+
+            </div>
+
+          </a>
+
+          <a class="service-card reveal" href="#work">
+
+            <div class="service-image"><img src="images/transit.png" alt="Public transport and transit advertising" loading="lazy"></div>
+
+            <div class="service-body">
+
+              <span class="service-index">03 / TRANSIT</span>
+
+              <h3>Transit Branding</h3>
+
+              <p>KSRTC buses, auto-rickshaws, trains and bus stand branding.</p>
+
+              <span class="service-arrow">↗</span>
+
+            </div>
+
+          </a>
+
+          <a class="service-card reveal" href="#contact">
+
+            <div class="service-image"><img src="images/corporate.png" alt="Corporate event and brand experience" loading="lazy"></div>
+
+            <div class="service-body">
+
+              <span class="service-index">04 / CORPORATE</span>
+
+              <h3>Corporate Solutions</h3>
+
+              <p>Corporate gifting, calendar printing and 3D printing for business.</p>
+
+              <span class="service-arrow">↗</span>
+
+            </div>
+
+          </a>
+
+          <a class="service-card reveal" href="#contact">
+            <div class="service-image"><img src="images/brand-identity.png" alt="Custom logo design, brand identity system and website design presentation" loading="lazy"></div>
+            <div class="service-body">
+              <span class="service-index">05 / BRAND &amp; DIGITAL</span>
+              <h3>Brand Identity &amp; Websites</h3>
+              <p>Logo design, complete brand identity and professional websites that give your business a distinctive digital presence.</p>
+              <span class="service-arrow">↗</span>
+            </div>
+          </a>
+
+          <a class="service-card reveal" href="#contact">
+            <div class="service-image"><img src="images/digital.png" alt="Advertising campaign planning and performance analysis" loading="lazy"></div>
+            <div class="service-body">
+              <span class="service-index">06 / CONSULTANCY</span>
+              <h3>Advertisement Efficiency Consultancy</h3>
+              <p>Evaluate your advertising spend, media choices and campaign performance to make every marketing investment work harder.</p>
+              <span class="service-arrow">↗</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <section class="about-section story-section" id="who-we-are" data-story="03">
+
+      <div class="container">
+
+        <div class="about-intro">
+          <div class="about-copy reveal">
+            <div class="section-kicker">Who We Are</div>
+            <h2 class="section-title">Experience that moves<br><span>brands forward.</span></h2>
+            <p class="section-description">Vajra Media brings together a collective 25+ years of experience in advertising and marketing. We combine strategic thinking, creative solutions and media understanding to help businesses build stronger brands and connect with the audiences that matter.</p>
+          </div>
+
+          <div class="about-experience reveal">
+            <strong>25<span>+</span></strong>
+            <div>YEARS OF<br>COLLECTIVE EXPERIENCE</div>
+            <small>Advertising &amp; Marketing</small>
+          </div>
+        </div>
+
+        <div class="partner-heading reveal">
+          <div class="section-kicker">The People Behind Vajra</div>
+          <h3>Meet the Partners</h3>
+        </div>
+
+        <div class="partner-grid">
+          <article class="partner-card reveal">
+            <span class="partner-number">PARTNER 01</span>
+            <div class="partner-avatar" aria-hidden="true">JD</div>
+            <div>
+              <h3>John Doe</h3>
+              <p>Partner</p>
+            </div>
+            <span class="partner-mark">V.</span>
+          </article>
+
+          <article class="partner-card reveal">
+            <span class="partner-number">PARTNER 02</span>
+            <div class="partner-avatar partner-avatar-alt" aria-hidden="true">R</div>
+            <div>
+              <h3>Richard</h3>
+              <p>Partner</p>
+            </div>
+            <span class="partner-mark">V.</span>
+          </article>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="approach-work-section story-section" id="approach" data-story="04" data-active="1">
+
+      <div class="journey-section">
+
+      <div class="container">
+
+        <div class="journey-heading reveal">
+
+          <div class="section-kicker">One Connected Campaign</div>
+
+          <h2 class="section-title">From a bold idea<br>to everywhere it matters.</h2>
+
+          <p class="section-description">A great campaign is more than one advertisement. Scroll through how Vajra brings strategy, media and execution together to make every impression count.</p>
+
+        </div>
+
+        <div class="journey-layout">
+
+          <div class="journey-stage-wrap">
+
+            <div class="journey-stage" aria-label="Illustration of a connected advertising campaign">
+
+              <div class="stage-topline"><span>VAJRA MEDIA / THE PROCESS</span><span>01 — 03</span></div>
+
+              <div class="stage-graphic">
+
+                <div class="stage-orbit"></div>
+
+                <div class="stage-diamond" aria-hidden="true">
+
+                  <svg viewBox="0 0 100 100" fill="none"><path d="M50 9 91 39 50 91 9 39 50 9Z" stroke="white" stroke-width="2.2"/><path d="M9 39h82M50 9l-12 30 12 52 12-52L50 9Z" stroke="white" stroke-width="1.5" opacity=".8"/></svg>
+
+                </div>
+
+                <div class="stage-chip chip-one"><b>◎</b> Digital</div>
+
+                <div class="stage-chip chip-two"><b>▰</b> Outdoor</div>
+
+                <div class="stage-chip chip-three"><b>↗</b> Transit</div>
+
+                <div class="stage-chip chip-four"><b>✳</b> Corporate</div>
+
+              </div>
+
+              <div class="stage-caption"><strong id="stageCaption">Start with strategy</strong><span>One partner. Connected reach.</span></div>
+
+            </div>
+
+          </div>
+
+          <div class="journey-steps">
+
+            <article class="journey-step is-active" data-step="1">
+
+              <span class="step-marker">01</span>
+
+              <p class="step-label">Discover &amp; Plan</p>
+
+              <h3>First, we understand what your brand needs to achieve.</h3>
+
+              <p>We begin with your audience, campaign objective, locations and budget. Then we identify the right mix of platforms and media formats for your message.</p>
+
+              <div class="step-detail"><span>Audience</span><span>Campaign goals</span><span>Media planning</span></div>
+
+            </article>
+
+            <article class="journey-step" data-step="2">
+
+              <span class="step-marker">02</span>
+
+              <p class="step-label">Connect the Channels</p>
+
+              <h3>We put your message where people live, move and scroll.</h3>
+
+              <p>Bring digital ads, OTT, hoardings, transit branding, theatre, FM and print together in a coordinated campaign across Kerala.</p>
+
+              <div class="step-detail"><span>Digital media</span><span>Outdoor &amp; transit</span><span>Regional reach</span></div>
+
+            </article>
+
+            <article class="journey-step" data-step="3">
+
+              <span class="step-marker">03</span>
+
+              <p class="step-label">Create &amp; Execute</p>
+
+              <h3>One clear idea. Consistent execution. Stronger visibility.</h3>
+
+              <p>From creative production and printing to media coordination, we help bring the campaign to life with a consistent brand experience at every touchpoint.</p>
+
+              <div class="step-detail"><span>Creative execution</span><span>Production</span><span>Campaign coordination</span></div>
+
+              <a class="button button-blue" href="#contact" style="margin-top:24px">Plan Your Campaign <span>→</span></a>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+
+      <div class="media-section media-chapter" id="work">
+
+      <div class="container media-layout">
+
+        <div class="media-copy">
+
+          <div class="section-kicker">Outdoor &amp; Media Solutions</div>
+
+          <h2 class="section-title">Take Your Brand Beyond the Screen.</h2>
+
+          <p class="section-description">Reach audiences wherever they travel, shop, watch and connect. Find the right media spaces for your next campaign with Vajra Media.</p>
+
+          <div class="media-list">
+
+            <span>Hoarding Advertising</span>
+
+            <span>Mini Hoardings</span>
+
+            <span>Hoarding Estimation &amp; Rental</span>
+
+            <span>KSRTC Bus Branding</span>
+
+            <span>Auto-rickshaw Branding</span>
+
+            <span>Train Branding</span>
+
+            <span>Bus Stand Branding</span>
+
+            <span>Theatre &amp; FM Ads</span>
+
+            <span>Newspaper Advertising</span>
+
+            <span>TV &amp; News Ads</span>
+
+            <span>Apartment Branding</span>
+
+            <span>LED Wall Advertising</span>
+
+          </div>
+
+          <a class="button" href="#contact">Plan an Outdoor Campaign <span>→</span></a>
+
+        </div>
+
+        <div class="media-visual">
+
+          <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=90" alt="Illuminated outdoor advertising billboard at dusk" loading="lazy">
+
+          <div class="media-tag"><strong>Be seen. Be remembered.</strong><span>Strategic media placements for brands with something to say.</span></div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+
+      <div class="why-section" id="kerala">
+
+      <div class="container">
+
+        <div class="why-heading">
+
+          <div class="section-kicker">The Vajra Advantage</div>
+
+          <h2 class="section-title">Your Campaign.<br>Connected Across Kerala.</h2>
+
+          <p class="section-description">Bring multiple media channels together with one coordinated advertising partner.</p>
+
+        </div>
+
+        <div class="why-grid">
+
+          <article class="why-card"><span class="why-number">01 / PLAN</span><h3>Integrated Planning</h3><p>Choose platforms and formats that align with your campaign objectives.</p></article>
+
+          <article class="why-card"><span class="why-number">02 / REACH</span><h3>Regional Reach</h3><p>Connect with audiences across cities, towns and communities in Kerala.</p></article>
+
+          <article class="why-card"><span class="why-number">03 / EXECUTE</span><h3>Campaign Coordination</h3><p>Coordinate multiple advertising formats through one media partner.</p></article>
+
+          <article class="why-card"><span class="why-number">04 / CREATE</span><h3>Creative Execution</h3><p>Turn campaign ideas into clear, memorable brand experiences.</p></article>
+
+        </div>
+
+      </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="cta-section story-section talk-section" id="campaign-cta" data-story="05">
+
+      <div class="container">
+
+        <div class="talk-panel talk-panel-wide">
+
+          <div class="talk-copy talk-copy-wide">
+            <div class="section-kicker">LET'S TALK BUSINESS / VAJRA MEDIA</div>
+            <h2>Good things happen when we <span>start talking.</span></h2>
+            <p>Have a brand to build, a campaign to plan or a business to grow? Book a one-on-one conversation with our team. Bring your ideas — we'll bring the possibilities.</p>
+
+            <!-- <div class="talk-points">
+              <span><b>↗</b> Discuss your business goals</span>
+              <span><b>↗</b> Explore the right advertising solutions</span>
+              <span><b>↗</b> Get clarity on your next steps</span>
+            </div> -->
+          </div>
+
+          <div class="talk-calendar-heading">
+            <div>
+              <span class="talk-booking-label">BOOK A CONVERSATION</span>
+              <h3>Choose a time that works for you.</h3>
+              <p>30-minute online consultation · Google Meet · Free initial consultation</p>
+            </div>
+            <span class="talk-calendar-icon" aria-hidden="true">▦</span>
+          </div>
+
+          <div class="talk-calendar-embed talk-calendar-embed-wide">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3M5sKqGYulQtszaJf-1IUEmPcmycMF5IcI_J57lwfLl_ITsZPLxy6YK8g0G0f4B4-GZ5QHUS_v?gv=true"
+              title="Book a Google Meet consultation with Vajra Media"
+              width="100%"
+              height="760"
+              frameborder="0"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <small class="talk-calendar-note">Select an available slot. Your Google Meet invitation will be sent after booking confirmation.</small>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="contact-section story-section" id="contact" data-story="06">
+
+      <div class="container contact-layout">
+
+        <div class="contact-copy">
+
+          <div class="section-kicker">Get in Touch</div>
+
+          <h2 class="section-title">Let's Make Your Brand Stand Out.</h2>
+
+          <p class="section-description">Have an advertising campaign in mind? Share a few details and the Vajra Media team can follow up with you.</p>
+
+          <div class="contact-detail"><span class="detail-icon">⌖</span><span><b>Location</b>Kerala, India</span></div>
+
+          <div class="contact-detail"><span class="detail-icon">✉</span><span><b>Email</b>Add your official business email</span></div>
+
+          <div class="contact-detail"><span class="detail-icon">☎</span><span><b>Phone</b>Add your business contact number</span></div>
+
+        </div>
+
+
+
+        <form class="contact-form" id="enquiryForm">
+
+          <div class="field"><label for="fullName">Your Name *</label><input id="fullName" name="name" autocomplete="name" placeholder="Name" required></div>
+
+          <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization" placeholder="Company name"></div>
+
+          <div class="field"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91" required></div>
+
+          <div class="field"><label for="service">Service Required *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Digital Advertising</option><option>Outdoor Advertising</option><option>Transit Branding</option><option>OTT / Theatre / FM / Newspaper / TV Ads</option><option>Corporate Gifting &amp; Printing</option><option>3D Printing</option><option>Logo Design &amp; Brand Identity</option><option>Website Design &amp; Development</option><option>Advertisement Efficiency Consultancy</option><option>Integrated Campaign</option></select></div>
+
+          <div class="field full"><label for="message">Tell Us About Your Campaign</label><textarea id="message" name="message" placeholder="Campaign objective, location, timeline or anything else we should know..."></textarea></div>
+
+          <button class="button button-blue field full" type="submit">Prepare Enquiry <span>→</span></button>
+
+          <p class="form-note">Demo form: connect this form to your email, CRM or WhatsApp number before publishing. It does not currently send or store enquiries.</p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <a class="brand" href="#home">
+
+            <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1088" aria-hidden="true">
+
+          <path d="M60 166 L1332 166 L697 1028 Z" fill="#2855D5" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+
+          <path d="M265 266 L412 66 L980 66 L1128 266 Z" fill="#C5EFF9"/>
+
+          <path d="M412 66 L490 266 L265 266 Z" fill="#78D3EB"/>
+
+          <path d="M412 66 L696 66 L490 266 Z" fill="#C5EFF9"/>
+
+          <path d="M696 66 L903 266 L490 266 Z" fill="#08A9E5"/>
+
+          <path d="M696 66 L980 66 L903 266 Z" fill="#C5EFF9"/>
+
+          <path d="M980 66 L1128 266 L903 266 Z" fill="#78D3EB"/>
+
+          <path d="M265 266 L490 266 L698 790 L698 874 Z" fill="#08B6DD"/>
+
+          <path d="M490 266 L903 266 L698 790 Z" fill="#7BCDE6"/>
+
+          <path d="M903 266 L1128 266 L698 874 L698 790 Z" fill="#078FE5"/>
+
+          <path d="M698 790 L698 874" fill="none" stroke="#18B8E9" stroke-width="2"/>
+
+        </svg>
+
+            <span class="brand-word">VAJRA<span>MEDIA</span></span>
+
+          </a>
+
+          <p class="footer-about">Integrated advertising, media and branding solutions that help businesses build visibility across Kerala.</p>
+
+        </div>
+
+        <div><h4>Explore</h4><div class="footer-links"><a href="#who-we-are">Who We Are</a><a href="#services">Services</a><a href="#approach">Our Approach &amp; Work</a><a href="#work">Our Work</a><a href="#contact">Contact</a></div></div>
+
+        <div><h4>Media Solutions</h4><div class="footer-links"><a href="#services">Digital Advertising</a><a href="#work">Outdoor Media</a><a href="#work">Transit Branding</a><a href="#services">Corporate Solutions</a></div></div>
+
+        <div><h4>Get in Touch</h4><div class="footer-links"><a href="#contact">Request a Quote</a><a href="#contact">Plan a Campaign</a><a href="#contact">Partner with Us</a></div></div>
+
+      </div>
+
+      <div class="footer-bottom"><span>© <span id="year"></span> Vajra Media. All rights reserved.</span><span>Advertising • Media • Branding</span></div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+
+    const navLinks = document.getElementById("navLinks");
+
+
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+
+    });
+
+
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.textContent = "☰";
+
+      });
+
+    });
+
+
+
+    // Reveal content as it enters the viewport (respects reduced-motion preferences).
+
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+      const revealObserver = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("is-visible");
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => revealObserver.observe(item));
+
+    } else {
+
+      revealItems.forEach(item => item.classList.add("is-visible"));
+
+    }
+
+
+
+    // Scrollytelling: the sticky campaign visual responds to the active story chapter.
+
+    const journey = document.querySelector(".journey-section");
+
+    const journeySteps = document.querySelectorAll(".journey-step");
+
+    const stageCaption = document.getElementById("stageCaption");
+
+    const captions = { 1: "Start with strategy", 2: "Connect every channel", 3: "Bring the campaign to life" };
+
+    if (journey && "IntersectionObserver" in window) {
+
+      const stepObserver = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            const step = entry.target.dataset.step;
+
+            journey.dataset.active = step;
+
+            journeySteps.forEach(item => item.classList.toggle("is-active", item === entry.target));
+
+            stageCaption.textContent = captions[step] || captions[1];
+
+          }
+
+        });
+
+      }, { rootMargin: "-35% 0px -42% 0px", threshold: 0 });
+
+      journeySteps.forEach(step => stepObserver.observe(step));
+
+    }
+
+
+
+
+
+    // Whole-page scrollytelling: reading progress, chapter navigation and staggered reveals.
+
+    const progressBar = document.getElementById("scrollProgressBar");
+
+    const storySections = [...document.querySelectorAll(".story-section")];
+
+    const storyRailLinks = [...document.querySelectorAll(".story-rail a")];
+
+    const motionReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+
+
+    function updateScrollProgress() {
+
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+
+      const progress = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+
+      if (progressBar) progressBar.style.width = progress + "%";
+
+      if (!motionReduced && window.innerWidth > 760) {
+
+        document.querySelector(".hero")?.style.setProperty("--hero-parallax", (window.scrollY * 0.12) + "px");
+
+      }
+
+    }
+
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+
+    window.addEventListener("resize", updateScrollProgress);
+
+    updateScrollProgress();
+
+
+
+    if ("IntersectionObserver" in window) {
+
+      const chapterObserver = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if (!entry.isIntersecting) return;
+
+          storySections.forEach(section => section.classList.toggle("is-current", section === entry.target));
+
+          const id = entry.target.id;
+
+          storyRailLinks.forEach(link => link.classList.toggle("is-active", link.getAttribute("href") === "#" + id));
+
+        });
+
+      }, { rootMargin: "-42% 0px -42% 0px", threshold: 0 });
+
+      storySections.forEach(section => chapterObserver.observe(section));
+
+
+
+      const revealTargets = document.querySelectorAll(
+
+        ".section-intro, .journey-heading, .service-card, .journey-stage-wrap, .media-copy, .media-visual, .why-heading, .why-card, .cta-panel, .contact-copy, .contact-form"
+
+      );
+
+      if (!motionReduced) {
+
+        const fullPageReveal = new IntersectionObserver(entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("story-reveal", "is-visible");
+
+              fullPageReveal.unobserve(entry.target);
+
+            }
+
+          });
+
+        }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
+
+        revealTargets.forEach((element, index) => {
+
+          element.style.setProperty("--reveal-delay", (index % 4) * 85 + "ms");
+
+          element.classList.add("story-reveal");
+
+          fullPageReveal.observe(element);
+
+        });
+
+      } else {
+
+        revealTargets.forEach(element => element.classList.add("is-visible"));
+
+      }
+
+    } else {
+
+      document.querySelectorAll(".story-reveal").forEach(element => element.classList.add("is-visible"));
+
+    }
+
+
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+
+    document.getElementById("enquiryForm").addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const data = new FormData(event.currentTarget);
+
+      const subject = encodeURIComponent("Vajra Media website enquiry");
+
+      const body = encodeURIComponent(
+
+        `Name: ${data.get("name")}nCompany: ${data.get("company")}nPhone: ${data.get("phone")}nService: ${data.get("service")}nMessage: ${data.get("message")}`
+
+      );
+
+      // Replace this address with Vajra Media's real enquiry email before launch.
+
+      window.location.href = `mailto:YOUR-EMAIL@example.com?subject=${subject}&body=${body}`;
+
+    });
+
+  </script>
+
+</body>
+
+</html>
